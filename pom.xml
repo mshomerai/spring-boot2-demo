@@ -8,20 +8,28 @@
     <artifactId>spring-boot2-demo</artifactId>
     <version>1.0.0</version>
 
+    <!--父包进行依赖管理，实际使用父包内的依赖需要在<dependencies>中定义，除非需要特定版本可不写版本号！非父包内依赖需要填写版本号-->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.7.0</version>
     </parent>
 
+    <!--starter依赖ctrl artifactId查看具体内容-->
+    <!--spring-boot-starter：基础包-->
+    <!--spring-boot-starter-autoconfigure：全场景（web、jpa...）自动配置包，对dependencies中开启的场景按需生效-->
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
     </dependencies>
 
-    <!--jar包生成插件-->
+    <!--可执行jar包生成插件-->
     <build>
         <plugins>
             <plugin>

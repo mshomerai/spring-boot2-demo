@@ -1,14 +1,24 @@
 package ml.java.boot2;
 
+import ml.java.boot2.autoconfig.Pet;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 
-//boot项目启动主程序
-@SpringBootApplication
+//@SpringBootApplication //相当于：@EnableAutoConfiguration+@ComponentScan
+@SpringBootApplication(scanBasePackages = {"ml.java"}) //默认扫描SpringBoot2Application.java同级和下级路径中所有，上级路径的不扫描！可配置scanBasePackages进行变更默认
 public class SpringBoot2Application {
 
+    //boot项目启动主程序
     public static void main(String[] args) {
-        SpringApplication.run(SpringBoot2Application.class, args);
+        // run：启动所生成的容器
+        ConfigurableApplicationContext run = SpringApplication.run(SpringBoot2Application.class, args);
+        /** 查看容器中所有加载的bean
+        for(String beanDefinitionName : run.getBeanDefinitionNames()){
+            System.out.println(beanDefinitionName);
+        }
+        */
+        run.getBean("tomcat", Pet.class).meow();
     }
 
 }
