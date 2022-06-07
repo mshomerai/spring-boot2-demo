@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
-//@SpringBootApplication //相当于：@EnableAutoConfiguration+@ComponentScan
+//@SpringBootApplication //相当于：@SpringBootConfiguration+@EnableAutoConfiguration+@ComponentScan
 @SpringBootApplication(scanBasePackages = {"ml.java"}) //默认扫描SpringBoot2Application.java同级和下级路径中所有，上级路径的不扫描！可配置scanBasePackages进行变更默认
 public class SpringBoot2Application {
 
