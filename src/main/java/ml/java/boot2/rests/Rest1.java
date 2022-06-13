@@ -11,4 +11,9 @@ public class Rest1 {
         return "Hello World!";
     }
 
+    @RequestMapping("/hello")
+    String hello(){
+        return "Hello!";
+    }
+
 }
