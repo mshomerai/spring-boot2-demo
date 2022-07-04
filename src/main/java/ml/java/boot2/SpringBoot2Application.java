@@ -1,6 +1,6 @@
 package ml.java.boot2;
 
-import ml.java.boot2.autoconfig.Pet;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -18,7 +18,7 @@ public class SpringBoot2Application {
             System.out.println(beanDefinitionName);
         }
         */
-        run.getBean("tomcat", Pet.class).meow();
+        //run.getBean("tomcat", Pet.class).meow();
     }
 
 }

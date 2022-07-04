@@ -1,4 +1,4 @@
-package ml.java.boot2.autoconfig;
+package ml.java.boot2.config;
 
 
 import org.springframework.context.annotation.Condition;

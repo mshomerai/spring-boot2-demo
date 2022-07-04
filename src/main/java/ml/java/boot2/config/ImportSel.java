@@ -1,4 +1,4 @@
-package ml.java.boot2.autoconfig;
+package ml.java.boot2.config;
 
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
@@ -10,7 +10,7 @@ public class ImportSel implements ImportSelector {
      */
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[]{"ml.java.boot2.autoconfig.Other"};
+        return new String[]{"ml.java.boot2.config.bean.Other"};
     }
 
 }

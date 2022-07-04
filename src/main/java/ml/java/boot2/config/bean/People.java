@@ -1,11 +1,11 @@
-package ml.java.boot2.autoconfig;
+package ml.java.boot2.config.bean;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 @Component
 @ConfigurationProperties(prefix = "user1") //自动绑定application.properties.user1
-public class User {
+public class People {
 
     private String name;
 
